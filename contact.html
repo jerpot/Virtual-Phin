@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Character encoding for proper text rendering -->
+    <meta charset="utf-8" />
+
+    <!-- Responsive viewport configuration for mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Page title displayed in browser tab -->
+    <title>Contact • Virtual Phin</title>
+
+    <!-- Bootstrap 5 CSS framework for responsive design and components -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom stylesheet for site-specific theming and styles -->
+    <link href="assets/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Navigational Bar: Consistent site-wide navigation -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-white shadow-sm sticky-top"
+    >
+      <div class="container">
+         <img src="assets/images/logo.png" style="width: 35px; height: 50px;""
+        class ="card-img-top" alt="Placeholder - Culture 1" />
+        <!-- Brand logo linking back to homepage -->
+        <a
+          class="navbar-brand fw-bold d-flex align-items-center"
+          href="index.html"
+        >
+          Virtual Phin
+        </a>
+
+        <!-- Mobile menu toggle button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#nav"
+          aria-controls="nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible navigation menu -->
+        <div class="collapse navbar-collapse" id="nav">
+          <!-- Navigation links aligned to the right -->
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="explore.html">Explore</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <!-- Primary CTA button with prototype badge -->
+            <li class="nav-item">
+              <a class="btn btn-primary ms-lg-3" href="play.html"
+                >Start Playing
+                <span class="badge text-bg-warning ms-2 align-middle"
+                  >Prototype</span
+                ></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Contact Page Content: Form and information sections -->
+    <section class="container py-5">
+      <!-- Page header with title and subtitle -->
+      <div class="mb-4 text-center">
+        <h2 class="fw-bold mb-1">Contact</h2>
+        <p class="text-muted">
+          Questions, feedback, or ideas? We would love to hear from you.
+        </p>
+      </div>
+
+      <!-- Two column layout: contact form on left, additional info on right -->
+      <div class="row g-4">
+        <!-- Left column: Contact form -->
+        <div class="col-lg-7">
+          <div class="p-4 rounded-4 shadow-sm bg-white h-100">
+            <!-- Form heading -->
+            <h5 class="mb-3">Send a message</h5>
+
+            <!-- Contact form. Note: This is a prototype form and does not submit data -->
+            <form>
+              <!-- Form fields arranged in grid layout -->
+              <div class="row g-3">
+                <!-- Name input field taking half width on medium screens -->
+                <div class="col-md-6">
+                  <label class="form-label small">Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Your name"
+                  />
+                </div>
+
+                <!-- Email input field taking half width on medium screens -->
+                <div class="col-md-6">
+                  <label class="form-label small">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="you@example.com"
+                  />
+                </div>
+
+                <!-- Message textarea taking full width -->
+                <div class="col-12">
+                  <label class="form-label small">Message</label>
+                  <textarea
+                    class="form-control"
+                    rows="5"
+                    placeholder="How can we help?"
+                  ></textarea>
+                </div>
+
+                <!-- Submit button. Type button is used because this is a prototype without backend -->
+                <div class="col-12">
+                  <button type="button" class="btn btn-primary">Send</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Right column: Information cards with anchor IDs for footer links -->
+        <div class="col-lg-5">
+          <!-- Support section with anchor ID -->
+          <div class="p-4 rounded-4 shadow-sm bg-light mb-4" id="support">
+            <h6 class="mb-2">Support us</h6>
+            <p class="small mb-2">
+              We plan to add donation options. For now, please reach out via the
+              form and we will get back to you.
+            </p>
+            <!-- Internal link to donate section below -->
+            <a class="btn btn-outline-secondary btn-sm" href="#donate"
+              >Donate</a
+            >
+          </div>
+
+          <!-- Donate section with anchor ID -->
+          <div class="p-4 rounded-4 shadow-sm bg-light mb-4" id="donate">
+            <h6 class="mb-2">Donate</h6>
+            <p class="small mb-0">
+              Coming soon: online donation links. In the meantime, contact us to
+              support the project.
+            </p>
+          </div>
+
+          <!-- FAQ section with anchor ID -->
+          <div class="p-4 rounded-4 shadow-sm bg-light" id="faq">
+            <h6 class="mb-2">FAQ</h6>
+            <p class="small mb-0">
+              We are compiling common questions. Send yours using the form.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second row: Terms and visit information -->
+      <div class="row g-4 mt-2">
+        <!-- Terms and privacy section -->
+        <div class="col-lg-6">
+          <div class="p-4 rounded-4 shadow-sm bg-white h-100" id="terms">
+            <h6 class="mb-2">Terms &amp; Privacy</h6>
+            <!-- Privacy anchor ID is nested within terms section -->
+            <p class="small mb-0" id="privacy">
+              Your access and use of our website constitutes your acceptance of
+              our full Terms of Service and commitment to the practices outlined
+              in our Privacy Policy. We are committed to protecting your
+              personal information. The data we collect is used responsibly to
+              To communicate with you, only with your explicit consent, about
+              news, upcoming events, and educational programs. Our Commitment to
+              You: We do not and will not sell your personal data to third
+              parties. We implement appropriate security measures to safeguard
+              your information. We are transparent about what we collect and
+              why. Your Control & Rights: You can unsubscribe from our marketing
+              communications at any time via the link in every email. please
+              review our comprehensive [Privacy Policy] and [Terms of Service]
+            </p>
+          </div>
+        </div>
+
+        <!-- Visit information with map placeholder -->
+        <div class="col-lg-6">
+          <div class="p-4 rounded-4 shadow-sm bg-white h-100">
+            <h6 class="mb-2">Visit us</h6>
+            <!-- Contact details list -->
+            <ul class="list-unstyled small mb-3">
+              <li>virtualphin@outlook.com</li>
+              <li>
+                123/45 Soi Sukhumvit 63, Khlong Tan Nuea, Watthana District,
+                Bangkok 10110, Thailand
+              </li>
+            </ul>
+            <!-- Placeholder iframe for future embedded map. Ratio class maintains 16:9 aspect -->
+            <div class="ratio ratio-16x9">
+              <iframe
+                class="rounded-4"
+                src="about:blank"
+                title="Map placeholder"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer: Reused site-wide footer component -->
+    <footer class="mt-5 pt-5 pb-4 bg-light border-top">
+      <div class="container">
+        <!-- Three column footer layout -->
+        <div class="row g-5">
+          <!-- Column 1: Site description and copyright -->
+          <div class="col-md-4 text-center">
+            <h5 class="fw-bold">Virtual Phin</h5>
+            <p class="small mb-2">
+              Dedicated to all things phin, dive into the history and culture of
+              this lovely Isan folk instrument.
+            </p>
+            <p class="small text-muted mb-0">© 2025 Virtual Phin</p>
+          </div>
+
+          <!-- Column 2: Quick links. These link to anchor IDs on this page -->
+          <div class="col-md-4 text-center">
+            <h6 class="fw-bold">Links</h6>
+            <!-- Inline block list for centered alignment -->
+            <ul class="list-unstyled small d-inline-block text-center">
+              <li><a href="contact.html#support">Support us</a></li>
+              <li><a href="contact.html#terms">Terms &amp; Conditions</a></li>
+              <li><a href="contact.html#privacy">Privacy</a></li>
+              <li><a href="contact.html#faq">FAQ</a></li>
+              <li><a href="contact.html#donate">Donate</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Contact information and button -->
+          <div class="col-md-4 text-center">
+            <h6 class="fw-bold">Contact</h6>
+            <ul class="list-unstyled small mb-2">
+              <li>+66 9 8123 4567</li>
+              <li>02-345-6789</li>
+              <li>
+                <a href="mailto:virtualphin@outlook.com"
+                  >virtualphin@outlook.com</a
+                >
+              </li>
+            </ul>
+            <!-- Self-referencing link since we are already on contact page -->
+            <a class="btn btn-outline-secondary btn-sm" href="contact.html"
+              >Visit Us</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript for interactive components like navbar collapse -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript for active navigation link highlighting -->
+    <script src="assets/main.js"></script>
+  </body>
+</html>

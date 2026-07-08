@@ -1,0 +1,503 @@
+/*
+  FILE: style.css
+  PURPOSE: Custom stylesheet for the Virtual Phin website. This file contains the site's theme, including color palette, typography, and interactive components. The styles are designed to complement Bootstrap 5 classes and create a cohesive Thai-inspired aesthetic.
+  
+  STRUCTURE:
+  1. Google Fonts import for Thai-friendly typography
+  2. CSS custom properties (variables) for colors, fonts, and Bootstrap overrides
+  3. Global styles for body and headings
+  4. Component-specific styles for navbar, hero, phin prototype, cards, and footer
+  5. Interactive states including hover, focus, and active effects
+  6. Touch device optimizations for mobile responsiveness
+  7. Accessibility enhancements with focus rings
+  
+  DESIGN APPROACH:
+  - Thai-inspired color scheme using lacquer red and gold
+  - Modern fonts: Pridi for headings (elegant), Prompt for body text (clean)
+  - Subtle animations on hover for tactile feedback
+  - Fully responsive with Bootstrap grid
+  - Touch-friendly interactions on mobile devices
+*/
+
+/* Import Thai-friendly fonts from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Pridi:wght@400;600;700&family=Prompt:wght@300;400;600&display=swap");
+
+/* CSS custom properties (variables) for consistent theming */
+:root {
+  /* Prototype sizing variables for the interactive phin component */
+  --phin-height: 320px;
+  --phin-strings: 4;
+
+  /* Thai-inspired color palette using traditional lacquer red and gold */
+  --thai-red: #8b1c13;
+  --thai-red-dark: #5a0e0a;
+  --thai-gold: #c9a227;
+  --thai-ivory: #fff8f0;
+  --thai-ivory-2: #fff4d6;
+  --thai-ink: #1f1a17;
+
+  /* Typography variables */
+  --font-heading: "Pridi", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Noto Sans Thai", serif;
+  --font-body: "Prompt", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Noto Sans Thai", sans-serif;
+
+  /* Bootstrap 5 variable overrides to apply custom theme */
+  --bs-primary: var(--thai-red);
+  --bs-secondary: var(--thai-gold);
+  --bs-warning: #e4b731;
+  --bs-body-bg: var(--thai-ivory);
+  --bs-body-color: #2b211a;
+  --bs-body-font-family: var(--font-body);
+  --bs-link-color: var(--thai-red);
+  --bs-link-hover-color: #6f140e;
+  --bs-border-color: rgba(139, 28, 19, 0.15);
+}
+
+/* Body background with subtle radial gradient for depth */
+body {
+  background: radial-gradient(
+    1800px 800px at 10% -10%,
+    #fffdf7 0%,
+    var(--thai-ivory) 60%,
+    var(--thai-ivory-2) 100%
+  );
+  color: var(--bs-body-color);
+}
+
+/* Apply custom heading font to all headings and navbar brand */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.display-1,
+.display-2,
+.display-3,
+.display-4,
+.display-5,
+.display-6,
+.navbar-brand {
+  font-family: var(--font-heading);
+  letter-spacing: 0.1px;
+}
+
+/* Make buttons slightly bolder for emphasis */
+.btn {
+  font-weight: 600;
+}
+
+/* Subtle text shadow on main hero heading for depth */
+.hero h1 {
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.03);
+}
+
+/* Stronger brand weight for modern, professional appearance */
+.navbar .navbar-brand {
+  font-weight: 700;
+}
+
+/* Hero section background with gradient overlay and image */
+.hero {
+  position: relative;
+  background: linear-gradient(
+      180deg,
+      rgba(201, 162, 39, 0.18),
+      rgba(255, 248, 240, 0.75)
+    ),
+    url("assets/images/placeholder-hero-banner.jpg") center/cover no-repeat;
+  overflow: hidden;
+}
+
+/* Video background styling for hero section */
+.hero-video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.3;
+}
+
+/* Hero content positioned above video background */
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Explore intro section with video background - half page height */
+.explore-intro {
+  position: relative;
+  overflow: hidden;
+  min-height: 50vh;
+  max-height: 50vh;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+/* Light overlay to keep text legible - reduced opacity for clearer video */
+.explore-intro::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(31, 26, 23, 0.25),
+    rgba(31, 26, 23, 0.15)
+  );
+  z-index: 0;
+}
+
+/* Video background for explore intro - increased opacity for better visibility */
+.explore-video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 50vh;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+  opacity: 0.85;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .explore-intro {
+    min-height: 40vh;
+    max-height: 40vh;
+  }
+
+  .explore-video-bg {
+    min-height: 40vh;
+  }
+
+  .explore-intro-content {
+    padding: 1rem 0;
+  }
+}
+
+/* Content above overlay and video - enhanced text shadows for readability */
+.explore-intro-content {
+  position: relative;
+  z-index: 1;
+  color: rgba(255, 255, 255, 0.98);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6), 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Enhanced text shadows for headings */
+.explore-intro-content h2,
+.explore-intro-content h3 {
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.7), 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Ensure supporting text remains readable with shadow */
+.explore-intro-content .text-muted {
+  color: rgba(255, 255, 255, 0.9) !important;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6), 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* Adjust buttons within intro for contrast with shadow */
+.explore-intro .btn-outline-secondary {
+  border-color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.98);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.explore-intro .btn-outline-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: var(--thai-ink);
+  text-shadow: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Navbar styling: Thai-inspired gradient with light text */
+.navbar.bg-white {
+  background: linear-gradient(
+    90deg,
+    var(--thai-red) 0%,
+    var(--thai-red-dark) 100%
+  ) !important;
+}
+
+/* Navbar scroll hide/show transition */
+.navbar {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Hide navbar when scrolling down */
+.navbar.navbar-hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+/* Navbar links in light color for contrast against dark background */
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Active and hover states for navbar links */
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+  color: #fff !important;
+}
+
+/* Gold CTA button in navbar for emphasis */
+.navbar .btn.btn-primary {
+  background-color: var(--thai-gold);
+  border-color: var(--thai-gold);
+  color: var(--thai-ink);
+}
+
+/* Darken gold button slightly on hover */
+.navbar .btn.btn-primary:hover {
+  filter: brightness(0.95);
+}
+
+/* Brand icon (SVG) next to logo text */
+.navbar .brand-icon {
+  height: 28px;
+  width: 28px;
+  color: var(--thai-gold);
+}
+
+/* Phin prototype container */
+.phin {
+  position: relative;
+  height: var(--phin-height);
+  overflow: hidden;
+}
+
+/* Individual string styling in the phin prototype */
+.phin .string {
+  position: relative;
+  height: calc(var(--phin-height) / var(--phin-strings));
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  transition: background 120ms ease;
+}
+
+/* Active state for string when clicked or played */
+.phin .string.active {
+  background: rgba(13, 110, 253, 0.1);
+}
+
+/* Display note letter on the left of each string */
+.phin .string::before {
+  content: attr(data-note);
+  position: absolute;
+  left: 0.75rem;
+  font-weight: 600;
+  color: #6c757d;
+}
+
+/* Fretboard visual overlay on the phin prototype */
+.fretboard {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to right,
+    transparent 0,
+    transparent 46px,
+    rgba(0, 0, 0, 0.06) 48px
+  );
+  pointer-events: none;
+}
+
+/* Card styling with subtle ivory background and warm borders */
+.card {
+  background-color: #fffbf2;
+  border-color: var(--bs-border-color);
+}
+
+/* Card titles use the primary theme color */
+.card .card-title {
+  color: var(--thai-red);
+}
+
+/* Footer styling: matches header gradient for visual consistency */
+footer {
+  background: linear-gradient(
+    90deg,
+    var(--thai-red) 0%,
+    var(--thai-red-dark) 100%
+  ) !important;
+  color: rgba(255, 255, 255, 0.9);
+  border-top: 1px solid rgba(201, 162, 39, 0.35) !important;
+}
+
+/* Footer headings in white for readability */
+footer h5,
+footer h6 {
+  color: #fff;
+}
+
+/* Muted text in footer slightly lighter for hierarchy */
+footer .text-muted {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+/* Footer links in gold for emphasis and consistency */
+footer a {
+  color: var(--thai-gold) !important;
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+/* Footer link hover state: lighter gold with underline */
+footer a:hover {
+  color: #ffefb0 !important;
+  text-decoration: underline;
+}
+
+/* Footer link focus state for accessibility */
+footer a:focus-visible {
+  outline: 2px solid var(--thai-gold);
+  outline-offset: 2px;
+}
+
+/* Remove any pseudo-element bullets from previous styling */
+footer ul.list-unstyled li a::before {
+  content: none;
+  display: none;
+}
+
+/* Footer button styling for consistency with theme */
+footer .btn.btn-outline-secondary {
+  border-color: var(--thai-gold);
+  color: var(--thai-gold);
+}
+
+/* Footer button hover state */
+footer .btn.btn-outline-secondary:hover {
+  background-color: var(--thai-gold);
+  color: var(--thai-ink);
+}
+
+/* Keyboard key styling for tutorial sections */
+kbd {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
+
+/* Interactive container hover effects: lift and glow */
+.card,
+.p-4.rounded-4 {
+  transition: transform 180ms ease, box-shadow 180ms ease,
+    border-color 180ms ease, background-color 180ms ease;
+}
+
+/* Lift card on hover for tactile feedback */
+.card:hover,
+.p-4.rounded-4:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0.75rem 2rem rgba(31, 26, 23, 0.15),
+    0 0.25rem 0.75rem rgba(139, 28, 19, 0.12);
+  border-color: rgba(201, 162, 39, 0.45);
+}
+
+/* Card image transition for zoom effect */
+.card .card-img-top {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 300ms ease;
+}
+
+/* Slight zoom on card image when card is hovered */
+.card:hover .card-img-top {
+  transform: scale(1.03);
+}
+
+/* Button hover effects: lift and shadow for tactile feedback */
+.btn {
+  transition: transform 140ms ease, box-shadow 140ms ease,
+    background-color 140ms ease, border-color 140ms ease, color 140ms ease;
+}
+
+/* Primary button lift on hover */
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1.25rem rgba(139, 28, 19, 0.2);
+}
+
+/* Button active state: press down effect */
+.btn:active {
+  transform: translateY(0);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Touch optimizations: faster response on mobile */
+a,
+button {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Remove transitions on touch devices for instant feedback */
+@media (hover: none) {
+  .btn,
+  .card,
+  .p-4.rounded-4,
+  .card .card-img-top {
+    transition: none !important;
+  }
+}
+
+/* Responsive image sizing for card images */
+@media (max-width: 768px) {
+  .card .card-img-top {
+    height: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .card .card-img-top {
+    height: 180px;
+  }
+}
+
+/* Accessibility: visible focus rings for keyboard navigation */
+.card:focus-visible,
+.p-4.rounded-4:focus-visible,
+.btn:focus-visible {
+  outline: 2px solid var(--thai-gold);
+  outline-offset: 2px;
+}
+
+/* Contact info sections - equal height and compact sizing */
+.contact-info-row {
+  align-items: stretch;
+}
+
+.contact-info-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-info-section h6 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.contact-info-section p {
+  flex-grow: 1;
+  margin-bottom: 0;
+}
+
+.contact-info-section .ratio {
+  margin-top: auto;
+}

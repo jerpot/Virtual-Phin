@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Character encoding for proper text rendering -->
+    <meta charset="utf-8" />
+
+    <!-- Responsive viewport configuration for mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Page title displayed in browser tab -->
+    <title>Virtual Phin</title>
+
+    <!-- Bootstrap 5 CSS framework for responsive design and components -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom stylesheet for site-specific theming and styles -->
+    <link href="assets/style.css" rel="stylesheet" />
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <!-- Navigational Bar: Consistent site wide navigation -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-white shadow-sm sticky-top"
+    >
+      <div class="container"> 
+        <img src="assets/images/logo.png" style="width: 35px; height: 50px;""
+        class ="card-img-top" alt="Placeholder - Culture 1" />
+        <!-- Brand logo linking back to homepage -->
+        <a
+          class="navbar-brand fw-bold d-flex align-items-center"
+          href="index.html"
+        >
+          Virtual Phin
+        </a>
+
+        <!-- Mobile menu toggle button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#nav"
+          aria-controls="nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible navigation menu -->
+        <div class="collapse navbar-collapse" id="nav">
+          <!-- Navigation links aligned to the right -->
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="explore.html">Explore</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <!-- Primary CTA button -->
+            <li class="nav-item">
+              <a class="btn btn-primary ms-lg-3" href="play.html"
+                >Start Playing
+                <span class="badge text-bg-warning ms-2 align-middle"
+                  >Prototype</span
+                ></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ABOUT CONTENT SECTION: Two-column layout with company information -->
+    <section class="container py-5 flex-grow-1">
+      <!-- Row with large gap between columns and vertical centering -->
+      <div class="row g-5 align-items-center">
+        <!-- Left column: Text content describing the company -->
+        <div class="col-lg-6">
+          <!-- Page heading -->
+          <h1 class="fw-bold mb-3">About</h1>
+
+          <!-- Subheading for company section -->
+          <h4 class="text-muted">Company</h4>
+
+          <!-- Company background and founding story -->
+          <p>
+            Welcome to Virtual Phin, where we believe that art and culture
+            shouldn't be hidden behind a language barrier. Founded in 2025, our
+            journey began with a simple idea: "What if we could use the internet
+            to preserve and share Isan culture?" We aim to share and foster a
+            connection to spread awareness about Isan culture and music for
+            future generations.
+          </p>
+
+          <!-- Mission section heading -->
+          <h4 class="mt-4">Our mission</h4>
+
+          <!-- Mission statement describing the organization's goals and approach -->
+          <p>
+            We are dedicated to cultural education through engaging web
+            experiences, beginner friendly lessons, and community stories. Our
+            approach is built on inclusivity and respect for tradition.
+          </p>
+        </div>
+
+        <!-- Right column: Image complementing the text content -->
+        <div class="col-lg-6 text-center">
+          <!-- Responsive image with rounded corners and shadow for visual appeal -->
+          <img
+            src="assets/images/virtual-phin-team.png"
+            class="img-fluid rounded-4 shadow-sm"
+            alt="Placeholder - About image"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER: Reused site-wide footer component -->
+    <footer class="mt-5 pt-5 pb-4 bg-light border-top">
+      <div class="container">
+        <!-- Three-column footer layout -->
+        <div class="row g-5">
+          <!-- Column 1: Site description and copyright -->
+          <div class="col-md-4 text-center">
+            <h5 class="fw-bold">Virtual Phin</h5>
+            <p class="small mb-2">
+              Dedicated to all things phin, dive into the history and culture of
+              this lovely Isan folk instrument.
+            </p>
+            <p class="small text-muted mb-0">© 2025 Virtual Phin</p>
+          </div>
+
+          <!-- Column 2: Quick links to other pages -->
+          <div class="col-md-4 text-center">
+            <h6 class="fw-bold">Links</h6>
+            <!-- Inline-block list for centered alignment -->
+            <ul class="list-unstyled small d-inline-block text-center">
+              <li><a href="contact.html#support">Support us</a></li>
+              <li><a href="contact.html#terms">Terms &amp; Conditions</a></li>
+              <li><a href="contact.html#privacy">Privacy</a></li>
+              <li><a href="contact.html#faq">FAQ</a></li>
+              <li><a href="contact.html#donate">Donate</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Contact information and button -->
+          <div class="col-md-4 text-center">
+            <h6 class="fw-bold">Contact</h6>
+            <ul class="list-unstyled small mb-2">
+              <li>+66 9 8123 4567</li>
+              <li>02-345-6789</li>
+              <li>
+                <a href="mailto:virtualphin@outlook.com"
+                  >virtualphin@outlook.com</a
+                >
+              </li>
+            </ul>
+            <!-- Contact page link styled as a button -->
+            <a class="btn btn-outline-secondary btn-sm" href="contact.html"
+              >Visit Us</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript for interactive components -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript for active navigation link highlighting -->
+    <script src="assets/main.js"></script>
+  </body>
+</html>

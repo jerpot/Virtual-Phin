@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Character encoding for proper text rendering -->
+    <meta charset="utf-8" />
+
+    <!-- Responsive viewport configuration for mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Page title displayed in browser tab -->
+    <title>Virtual Phin</title>
+
+    <!-- Bootstrap 5 CSS framework for responsive design and components -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom stylesheet for site-specific theming and styles -->
+    <link href="assets/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Navigational Bar: Consistent site-wide navigation -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-white shadow-sm sticky-top"
+    >
+      <div class="container">
+        <img src="assets/images/logo.png" style="width: 35px; height: 50px;""
+        class ="card-img-top" alt="Placeholder - Culture 1" />
+        <!-- Brand logo linking back to homepage -->
+        <a
+          class="navbar-brand fw-bold d-flex align-items-center"
+          href="index.html"
+        >
+          Virtual Phin
+        </a>
+
+        <!-- Mobile menu toggle button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#nav"
+          aria-controls="nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible navigation menu -->
+        <div class="collapse navbar-collapse" id="nav">
+          <!-- Navigation links aligned to the right -->
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="explore.html">Explore</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <!-- Primary CTA button with prototype badge -->
+            <li class="nav-item">
+              <a class="btn btn-primary ms-lg-3" href="play.html"
+                >Start Playing
+                <span class="badge text-bg-warning ms-2 align-middle"
+                  >Prototype</span
+                ></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content Section: Contains history, artists, lessons, and culture sections -->
+    <section class="explore-intro py-5">
+      <!--  Explore page video background placeholder -->
+      <video class="explore-video-bg" autoplay loop muted playsinline>
+        <source
+          src="assets/images/thailand cinematic video.webm"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+      <div class="container explore-intro-content text-center text-lg-start">
+        <!-- Page header with title and description -->
+        <div class="mb-4">
+          <h2 class="fw-bold">Explore</h2>
+          <p class="text-muted">
+            Dive into Isan's history, artists, lessons, and culture.
+          </p>
+        </div>
+
+        <!-- History Section: Two column layout with text and image. Anchor ID allows direct linking from footer -->
+        <div id="history" class="mb-5">
+          <h3 class="fw-semibold">History</h3>
+          <!-- Row with alignment center to vertically align text and image -->
+          <div class="row g-4 align-items-center">
+            <!-- Left column: Historical description and read more link -->
+            <div class="col-lg-6">
+              <p>
+                Isan, the northeastern region of Thailand, has a distinct
+                history influenced by Khmer and Lao cultures, later integrated
+                into the modern Thai state in the early 20th century.
+              </p>
+              <!-- Placeholder link for future detailed history page -->
+              <a class="btn btn-outline-secondary btn-sm mt-1" href="#"
+                >Read more</a
+              >
+        </div>
+      </div>
+    </section>
+
+s    <section class="container py-5">
+      <!-- Artists Section: Three column card layout showcasing musicians. Anchor ID for navigation -->
+      <div id="artists" class="mb-5">
+        <h3 class="fw-semibold">Artists</h3>
+        <!-- Three column responsive grid, stacks on smaller screens -->
+        <div class="row g-4">
+          <!-- Artist card 1 -->
+          <div class="col-md-4 text-center">
+            <div class="card h-100 shadow-sm">
+              <img
+                src="assets/images/dj artist.jpg"
+                class="card-img-top"
+                alt="Placeholder - Artist 1"
+              />
+              <div class="card-body">
+                <!-- Placeholder title and description for artist profile -->
+                <h5 class="card-title">DJ Mali Kae (มะลิแก้ว)</h5>
+                <p class="card-text small">A rising DJ and producer known for blending deep house beats with traditional 
+                  Thai instruments like the khim and ranat ek.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Artist card 2 -->
+          <div class="col-md-4 text-center">
+            <div class="card h-100 shadow-sm">
+              <img
+                src="assets/images/folk artist 1.png"
+                class="card-img-top"
+                alt="Placeholder - Artist 2"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Arun Phairoj (อรุณ ไพโรจน์)</h5>
+                <p class="card-text small">Arun’s songs blend luk thung and mor lam influences with poetic lyrics that speak to the everyday struggles and quiet joys of Thai countryside living.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Artist card 3 -->
+          <div class="col-md-4 text-center">
+            <div class="card h-100 shadow-sm">
+              <img
+                src="assets/images/thai-rapper.png"
+                class="card-img-top"
+                alt="Placeholder - Artist 3"
+              />
+              <div class="card-body">
+                <h5 class="card-title">RAKONE (รักวัน)</h5>
+                <p class="card-text small">RAKONE is a Thai rapper from Khon Kaen known for his raw lyricism and socially aware storytelling. His stage name, meaning “Love Day”,</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lessons Section: Structured beginner guide with accordion and quick reference. Anchor ID for navigation -->
+      <div id="lessons" class="mb-5">
+        <h3 class="fw-semibold">Lessons</h3>
+        <!-- Two column layout: accordion lessons on left, quick reference on right -->
+        <div class="row g-4">
+          <!-- Left column: Accordion with lesson steps -->
+          <div class="col-lg-8">
+            <!-- Disclaimer badge indicating prototype limitations -->
+            <div class="p-4 rounded-4 shadow-sm bg-white mb-3">
+              <div class="d-flex align-items-center">
+                <span class="badge text-bg-warning me-2">Prototype</span>
+                <p class="small mb-0">
+                  This is a simplified guide to get you playing quickly. Real
+                  Phin technique varies by tradition.
+                </p>
+              </div>
+            </div>
+
+            <!-- Bootstrap accordion component. ID lessonGuide allows parent reference for proper collapse behavior -->
+            <div class="accordion" id="lessonGuide">
+              <!-- Accordion item 1: Tuning basics -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="lg1">
+                  <!-- Accordion button triggers collapse. Show class makes this item open by default -->
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#lg1c"
+                    aria-expanded="true"
+                    aria-controls="lg1c"
+                  >
+                    1) Tuning basics (quick start)
+                  </button>
+                </h2>
+                <!-- Collapse content shown by default with show class -->
+                <div
+                  id="lg1c"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="lg1"
+                  data-bs-parent="#lessonGuide"
+                >
+                  <div class="accordion-body">
+                    <ul class="small mb-0">
+                      <li>
+                        Phin tunings vary. For this prototype, the strings are
+                        labeled <strong>E</strong>, <strong>A</strong>,
+                        <strong>F</strong>, <strong>G</strong> for quick ear
+                        training.
+                      </li>
+                      <li>
+                        If you have a real phin, use a tuner app and match your
+                        preferred tuning. Consistency matters more than exact
+                        pitch at the start.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Accordion item 2: Holding and posture -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="lg2">
+                  <!-- Collapsed class hides content initially -->
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#lg2c"
+                    aria-expanded="false"
+                    aria-controls="lg2c"
+                  >
+                    2) Holding and posture
+                  </button>
+                </h2>
+                <!-- Collapse content hidden by default without show class -->
+                <div
+                  id="lg2c"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="lg2"
+                  data-bs-parent="#lessonGuide"
+                >
+                  <div class="accordion-body">
+                    <ul class="small mb-0">
+                      <li>
+                        Sit up straight; rest the body of the phin on your
+                        thigh. Keep shoulders relaxed.
+                      </li>
+                      <li>
+                        Left hand supports the neck lightly; thumb behind the
+                        neck, fingers curved.
+                      </li>
+                      <li>
+                        Right hand hovers over the strings. Use a pick or
+                        thumbnail; let the wrist stay loose.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Accordion item 3: Right hand technique -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="lg3">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#lg3c"
+                    aria-expanded="false"
+                    aria-controls="lg3c"
+                  >
+                    3) Right hand: pluck and strum
+                  </button>
+                </h2>
+                <div
+                  id="lg3c"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="lg3"
+                  data-bs-parent="#lessonGuide"
+                >
+                  <div class="accordion-body">
+                    <ul class="small">
+                      <li>
+                        <strong>Pluck</strong>: Aim for a clean, single string
+                        stroke. Start slow, keep volume even.
+                      </li>
+                      <li>
+                        <strong>Alternate</strong>: Practice down up down up on
+                        one string for 4 counts.
+                      </li>
+                      <li>
+                        <strong>Light strum</strong>: Brush two or more strings
+                        with a relaxed wrist for texture.
+                      </li>
+                    </ul>
+                    <!-- Alert box linking to prototype for practice -->
+                    <div class="alert alert-secondary py-2 small mb-0">
+                      Try on the prototype: Click strings with the mouse or
+                      press <kbd>E</kbd>, <kbd>A</kbd>, <kbd>F</kbd>,
+                      <kbd>G</kbd> on your keyboard.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Accordion item 4: Left hand fretting -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="lg4">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#lg4c"
+                    aria-expanded="false"
+                    aria-controls="lg4c"
+                  >
+                    4) Left hand: fretting basics
+                  </button>
+                </h2>
+                <div
+                  id="lg4c"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="lg4"
+                  data-bs-parent="#lessonGuide"
+                >
+                  <!-- Single paragraph content without list structure -->
+                  <div class="accordion-body small">
+                    Press close to the fret wire (not on top) with your
+                    fingertip. Keep fingers curved; use minimal pressure for a
+                    clean tone. Practice lifting and placing steadily without
+                    squeezing.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Accordion item 5: First rhythm exercise -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="lg5">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#lg5c"
+                    aria-expanded="false"
+                    aria-controls="lg5c"
+                  >
+                    5) First rhythm: 4 beat groove
+                  </button>
+                </h2>
+                <div
+                  id="lg5c"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="lg5"
+                  data-bs-parent="#lessonGuide"
+                >
+                  <div class="accordion-body small">
+                    <!-- Rhythm counting instructions -->
+                    Count out loud: 1 - 2 - 3 - 4. On each count, pluck a
+                    string:
+                    <!-- Code element for musical notation -->
+                    <div class="mt-2">
+                      <code>E - A - F - G</code>
+                    </div>
+                    Repeat for 4 bars, keeping your volume even. Then reverse:
+                    <code>G - F - A - E</code>.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Accordion item 6: Call and response pattern -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="lg6">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#lg6c"
+                    aria-expanded="false"
+                    aria-controls="lg6c"
+                  >
+                    6) Simple pattern: call and response
+                  </button>
+                </h2>
+                <div
+                  id="lg6c"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="lg6"
+                  data-bs-parent="#lessonGuide"
+                >
+                  <div class="accordion-body small">
+                    <!-- Musical pattern with rests -->
+                    Play two beats, leave two beats. Example:
+                    <div class="mt-2"><code>E - A - (rest) - (rest)</code></div>
+                    Answer with:
+                    <div><code>F - G - (rest) - (rest)</code></div>
+                    This helps timing and phrasing.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Accordion item 7: Practice plan -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="lg7">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#lg7c"
+                    aria-expanded="false"
+                    aria-controls="lg7c"
+                  >
+                    7) Practice plan (10 to 15 mins)
+                  </button>
+                </h2>
+                <div
+                  id="lg7c"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="lg7"
+                  data-bs-parent="#lessonGuide"
+                >
+                  <div class="accordion-body">
+                    <!-- Ordered list for structured practice routine -->
+                    <ol class="small mb-0">
+                      <li>1 min: posture + relaxed hands check</li>
+                      <li>
+                        4 mins: pluck on one string (down up down up), slow and
+                        even
+                      </li>
+                      <li>
+                        4 mins: 4 beat groove: <code>E - A - F - G</code>, then
+                        reverse
+                      </li>
+                      <li>3 mins: call and response patterns with rests</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right column: Quick reference sidebar -->
+          <div class="col-lg-4">
+            <div class="p-4 rounded-4 shadow-sm bg-light">
+              <h5 class="mb-2">Quick reference</h5>
+              <!-- List group with transparent background to match container -->
+              <ul class="list-group list-group-flush small">
+                <li class="list-group-item bg-transparent">
+                  Strings in prototype: <code>E</code> • <code>A</code> •
+                  <code>F</code> • <code>G</code>
+                </li>
+                <li class="list-group-item bg-transparent">
+                  Mouse: click to pluck, drag to light strum
+                </li>
+                <li class="list-group-item bg-transparent">
+                  Keyboard: press <kbd>E</kbd>, <kbd>A</kbd>, <kbd>F</kbd>,
+                  <kbd>G</kbd>
+                </li>
+                <li class="list-group-item bg-transparent">
+                  Keep wrists loose; breathe and count out loud
+                </li>
+              </ul>
+              <!-- Full width button linking to prototype -->
+              <a class="btn btn-primary w-100 mt-3" href="play.html"
+                >Open the Prototype</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Culture Section: Three column card layout showcasing cultural elements. Anchor ID for navigation -->
+      <div id="culture" class="mb-5">
+        <h3 class="fw-semibold">Culture</h3>
+        <!-- Three column responsive grid -->
+        <div class="row g-4">
+          <!-- Culture card 1: General culture -->
+          <div class="col-md-4 text-center">
+            <div class="card h-100 shadow-sm">
+              <img
+                src="assets/images/fashion.jpg"
+                class="card-img-top"
+                alt="Placeholder - Culture 1"
+              />
+              <div class="card-body">
+                <!-- Placeholder content for cultural topics -->
+                <h5 class="card-title">Fashion</h5>
+                <p class="card-text small">
+                  Thai Traditional Fashion reflects the country’s grace, craftsmanship, and cultural identity. It often features silk or cotton fabrics
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Culture card 2: Food -->
+          <div class="col-md-4 text-center">
+            <div class="card h-100 shadow-sm">
+              <img
+                src="assets/images/chicken-pad-thai.webp"
+                class="card-img-top"
+                alt="Placeholder - Culture 2"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Food</h5>
+                <p class="card-text small">
+                  Pad Thai is a popular Thai stir-fried noodle dish made with rice noodles, eggs, tofu or shrimp, and flavored with tamarind paste,
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Culture card 3: Festivals -->
+          <div class="col-md-4 text-center">
+            <div class="card h-100 shadow-sm">
+              <img
+                src="assets/images/songkran.webp"
+                class="card-img-top"
+                alt="Placeholder - Culture 3"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Festivals</h5>
+                <p class="card-text small">
+                  Songkran is Thailand’s traditional New Year festival, celebrated in mid-April. Known for its joyful water-splashing festivities
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer: Reused site-wide footer component -->
+    <footer class="mt-5 pt-5 pb-4 bg-light border-top">
+      <div class="container">
+        <!-- Three column footer layout -->
+        <div class="row g-5">
+          <!-- Column 1: Site description and copyright -->
+          <div class="col-md-4 text-center">
+            <h5 class="fw-bold">Virtual Phin</h5>
+            <p class="small mb-2">
+              Dedicated to all things phin, dive into the history and culture of
+              this lovely Isan folk instrument.
+            </p>
+            <p class="small text-muted mb-0">© 2025 Virtual Phin</p>
+          </div>
+
+          <!-- Column 2: Quick links -->
+          <div class="col-md-4 text-center">
+            <h6 class="fw-bold">Links</h6>
+            <!-- Inline block list for centered alignment -->
+            <ul class="list-unstyled small d-inline-block text-center">
+              <li><a href="contact.html#support">Support us</a></li>
+              <li><a href="contact.html#terms">Terms &amp; Conditions</a></li>
+              <li><a href="contact.html#privacy">Privacy</a></li>
+              <li><a href="contact.html#faq">FAQ</a></li>
+              <li><a href="contact.html#donate">Donate</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Contact information and button -->
+          <div class="col-md-4 text-center">
+            <h6 class="fw-bold">Contact</h6>
+            <ul class="list-unstyled small mb-2">
+              <li>+66 9 8123 4567</li>
+              <li>02-345-6789</li>
+              <li>
+                <a href="mailto:virtualphin@outlook.com"
+                  >virtualphin@outlook.com</a
+                >
+              </li>
+            </ul>
+            <!-- Contact page link styled as a button -->
+            <a class="btn btn-outline-secondary btn-sm" href="contact.html"
+              >Visit Us</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript for interactive components like accordion and navbar collapse -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript for active navigation link highlighting -->
+    <script src="assets/main.js"></script>
+  </body>
+</html>
